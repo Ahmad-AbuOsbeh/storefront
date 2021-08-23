@@ -1,0 +1,55 @@
+export const categories = [
+  { normalizedName: 'ELECTRONICS', displayName: 'ELECTRONICS', description: 'this is a collection of electronics products' },
+  { normalizedName: 'FOOD', displayName: 'FOOD', description: 'this is a collection of food products' },
+  { normalizedName: 'SPORTS', displayName: 'SPORTS', description: 'this is a collection of sports products' },
+];
+export const products = [
+  {
+    category: 'ELECTRONICS',
+    name: 'Stepper Motor',
+    description: 'good for light weight loads',
+    price: '10$',
+    inventoryCount: 7,
+    img: 'https://www.motioncontroltips.com/wp-content/uploads/2019/06/Nanotec-SCA5618_Web.jpeg',
+  },
+  {
+    category: 'ELECTRONICS',
+    name: 'Arduino Kit',
+    description: 'for building Arduino projects',
+    price: '35$',
+    inventoryCount: 3,
+    img: 'https://5.imimg.com/data5/MU/LM/MY-9380557/arduino-uno-starter-kit-500x500.jpg',
+  },
+  {
+    category: 'FOOD',
+    name: 'Mansaf',
+    description: 'good to correct your mode lol..',
+    price: '20$',
+    inventoryCount: 3,
+    img: 'http://migrationology.smugmug.com/Jordan-Travel-Guide/i-8xVPrHQ/0/X3/mansaf-jordanian-food-19-X3.jpg',
+  },
+  {
+    category: 'FOOD',
+    name: 'Zait & Zaater',
+    description: 'best food for healthy people',
+    price: '3$',
+    inventoryCount: 12,
+    img: 'https://2.bp.blogspot.com/-N-OmV9Wi5sM/XK70kcYjAQI/AAAAAAACSzQ/j1bHjkBmvrwwZvmDPRXb2hBG0vDukEwpACLcBGAs/s1600/01.JPG',
+  },
+  {
+    category: 'SPORTS',
+    name: 'TreadMills',
+    description: 'sport device that allows you to run a lot of kilometeres at your palce!',
+    price: '125$',
+    inventoryCount: 2,
+    img: 'https://images.unsplash.com/photo-1578763363228-6e8428de69b2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJlYWRtaWxsc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+  },
+  {
+    category: 'SPORTS',
+    name: 'Giant Bicycle',
+    description: 'top one brand on the world of bicycles production.',
+    price: '350$',
+    inventoryCount: 1,
+    img: 'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1584467320-e-1-pro-1584467304.jpg?crop=0.941xw:0.707xh;0.0321xw,0.245xh&resize=480%3A%2A',
+  },
+];
