@@ -14,7 +14,7 @@
 
 ## Deployed Link :
 
-- []()
+- [https://redux-ahmad-abuosbeh.netlify.app/](https://redux-ahmad-abuosbeh.netlify.app/)
 
 ## UML :
 
