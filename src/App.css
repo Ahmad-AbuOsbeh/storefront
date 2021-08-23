@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  padding: 1rem;
+  color: #ffb830;
+}
+
+.card-ui {
+  margin: 0.5rem;
+  width: 25rem;
+}
+
+#desc {
+  color: #282c34;
+  font-weight: lighter;
+}
+
+#nav-bar {
+  color: #3db2ff !important;
+  background-color: #ffb830;
+}
+
+#cards-container {
+  display: inline-flex;
+}
+
+#footer {
+  position: absolute;
+  width: 98%;
+  bottom: -15rem;
+  margin-bottom: 5rem;
+}
