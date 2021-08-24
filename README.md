@@ -36,7 +36,7 @@
 
 ## Deployed Link :
 
-- [https://redux-ahmad-abuosbeh.netlify.app/](https://redux-ahmad-abuosbeh.netlify.app/)
+- [https://ahmad-abuosbeh-main-redux.netlify.app/](https://ahmad-abuosbeh-main-redux.netlify.app/)
 
 ## UML :
 
