@@ -23,7 +23,7 @@ export const products = [
   {
     category: 'FOOD',
     name: 'Mansaf',
-    description: 'good to correct your mode lol..',
+    description: 'good to correct your mood LoL..',
     price: '20$',
     inventoryCount: 3,
     img: 'http://migrationology.smugmug.com/Jordan-Travel-Guide/i-8xVPrHQ/0/X3/mansaf-jordanian-food-19-X3.jpg',
@@ -39,7 +39,7 @@ export const products = [
   {
     category: 'SPORTS',
     name: 'TreadMills',
-    description: 'sport device that allows you to run a lot of kilometeres at your palce!',
+    description: 'run a lot of kilometeres at your palce!',
     price: '125$',
     inventoryCount: 2,
     img: 'https://images.unsplash.com/photo-1578763363228-6e8428de69b2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJlYWRtaWxsc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
