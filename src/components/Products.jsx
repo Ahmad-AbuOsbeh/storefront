@@ -6,8 +6,7 @@ import MediaCard from './card';
 function Products(props) {
   useEffect(() => {
     console.log('hello from use effect');
-    props.filterProducts(props.cat.activeCategory.normalizedName, props.cat.products);
-    console.log('props.prod.filteredProducts', props.prod.filteredProducts);
+    props.filterProducts(props.cat.activeCategory.normalizedName);
   }, [props.cat.activeCategory]);
   return (
     <div id='cards-container'>
