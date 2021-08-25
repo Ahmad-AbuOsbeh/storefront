@@ -3,17 +3,24 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteFromCart } from '../reducer/actions';
 import ClearIcon from '@material-ui/icons/Clear';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-
+import { updateInStockHandler } from '../reducer/actions';
 export default function SimpleCart() {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.cart.cartProducts);
+  const state = useSelector(({ cart, prod }) => ({
+    cart: cart.cartProducts,
+    prod: prod.products,
+  }));
+
   function deleteHandler(productName) {
-    dispatch(deleteFromCart(productName));
+    let prodObject;
+    state.prod.map((p) => (p.name == productName ? (prodObject = p) : false));
+    prodObject.inStock = prodObject.inStock + 1;
+    dispatch(updateInStockHandler(prodObject, 'delete'));
   }
   return (
     <div id='simple-cart'>
       <ul>
-        {state.map((product) => (
+        {state.cart.map((product) => (
           <>
             <li id='li'>
               {product} <button onClick={() => deleteHandler(product)}>x</button>

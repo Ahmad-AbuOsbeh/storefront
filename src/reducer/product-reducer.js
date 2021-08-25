@@ -1,7 +1,5 @@
-import { products } from '../store/data';
-
 export const initialState = {
-  products: products,
+  products: [],
   filteredProducts: [],
 };
 
@@ -10,6 +8,11 @@ export const productReducer = (state = initialState, action) => {
   let filteredProducts;
   let products;
   switch (type) {
+    case 'GET_PRODUCTS':
+      products = payload;
+      filteredProducts = state.filteredProducts;
+
+      return { filteredProducts, products };
     case 'FILTER_PRODUCTS':
       products = state.products;
       filteredProducts = state.products.filter((product) => product.category == payload);
@@ -19,7 +22,7 @@ export const productReducer = (state = initialState, action) => {
       products = state.products;
       filteredProducts = state.filteredProducts.map((product) => {
         if (product.name == payload) {
-          product.inventoryCount = product.inventoryCount - 1;
+          // product.inStock = product.inStock - 1;
         }
         return product;
       });
@@ -30,7 +33,7 @@ export const productReducer = (state = initialState, action) => {
       products = state.products;
       filteredProducts = state.filteredProducts.map((product) => {
         if (product.name == payload) {
-          product.inventoryCount = product.inventoryCount + 1;
+          // product.inStock = product.inStock + 1;
         }
         return product;
       });

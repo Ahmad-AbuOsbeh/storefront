@@ -41,3 +41,25 @@
 ## UML :
 
 - ![UML-lab37](src/images/UML-lab37.jpg)
+
+  <br/>
+
+# LAB 38 - Redux - Asynchronous Actions
+
+### Description :
+
+#### 1. connect the store with real API.
+
+#### 2. use redux Thunk middeleware for async logic.
+
+## PR link :
+
+- [https://github.com/Ahmad-AbuOsbeh/storefront/pull/3](https://github.com/Ahmad-AbuOsbeh/storefront/pull/3)
+
+## Deployed Link :
+
+- [https://ahmad-abuosbeh-main-redux.netlify.app/](https://ahmad-abuosbeh-main-redux.netlify.app/)
+
+## UML :
+
+- ![UML-lab38](src/images/UML-lab38.jpg)
