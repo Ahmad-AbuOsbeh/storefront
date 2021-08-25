@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../reducer/actions';
+import { updateInStockHandler } from '../reducer/actions';
 
 const useStyles = makeStyles({
   root: {
@@ -24,8 +25,15 @@ export default function MediaCard(props) {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   function addToCartHandler(productName) {
-    if (!state.cart.cartProducts.includes(productName)) {
-      dispatch(addToCart(productName));
+    let prodObj;
+    // console.log('state.prod.products before', state.prod.products);
+    state.prod.products.map((p) => (p.name == productName ? (prodObj = p) : false));
+    let inStock = prodObj.inStock;
+    // console.log('inStock', inStock);
+    if (!state.cart.cartProducts.includes(productName) && inStock > 0) {
+      prodObj.inStock = prodObj.inStock - 1;
+      dispatch(updateInStockHandler(prodObj, 'add'));
+      // console.log('state.prod.products after', state.prod.products);
     }
   }
   return (
@@ -37,13 +45,13 @@ export default function MediaCard(props) {
             {props.product.name}
           </Typography>
           <Typography variant='body2' color='textSecondary' component='p'>
-            {props.product.description}
+            {props.product.description?.slice(0, 150)}
           </Typography>
           <Typography gutterBottom variant='h6' component='h6'>
-            Price : {props.product.price}
+            Price : {props.product.price} $
           </Typography>
           <Typography gutterBottom variant='h6' component='h6'>
-            available : {props.product.inventoryCount} pieces
+            inStock : {props.product.inStock}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -2,11 +2,15 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { filterProducts } from '../reducer/actions';
 import MediaCard from './card';
+import { getProductsHandler } from '../reducer/actions';
 
 function Products(props) {
   useEffect(() => {
-    console.log('hello from use effect');
-    props.filterProducts(props.cat.activeCategory.normalizedName);
+    props.getProductsHandler();
+  }, []);
+  useEffect(() => {
+    // console.log('hello from use effect');
+    props.filterProducts(props.cat.activeCategory.name);
   }, [props.cat.activeCategory]);
   return (
     <div id='cards-container'>
@@ -19,8 +23,8 @@ function Products(props) {
   );
 }
 const mapStateToProps = (state) => {
-  console.log('STATE???', state);
+  // console.log('STATE???', state);
   return state;
 };
-const mapDispatchToProps = { filterProducts };
+const mapDispatchToProps = { filterProducts, getProductsHandler };
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
